@@ -22,7 +22,9 @@
     "webpack-merge": "^5.2.0"
   },
   "dependencies": {
+    "css-loader": "^5.0.0",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "style-loader": "^2.0.0"
   }
 }
