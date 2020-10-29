@@ -19,17 +19,17 @@ export default function Return() {
 				<td></td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td></td>
@@ -38,7 +38,7 @@ export default function Return() {
 				<td>元本（払い戻し）3/30</td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td></td>

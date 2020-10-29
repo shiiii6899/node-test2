@@ -18,7 +18,7 @@ export default function Profit() {
 				<td>売買</td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td></td>
@@ -39,17 +39,17 @@ export default function Profit() {
 				<td></td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 					</form>
 				</td>
 				<td>	
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number"/></label>
 				</form></td>
 				<td></td>
 			</tr>

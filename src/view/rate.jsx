@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function Rate() {
+export default function Rate(props) {
   return (
     <table>
 			<tr>
 				<td><b>利率:</b></td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label>?<input type="number" name="number"/></label>
+						<label><input type="number" name="number" onChange={this.props.onChangeRate}/></label>
           </form>  
 				</td>
 			</tr>
