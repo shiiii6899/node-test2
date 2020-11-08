@@ -6,10 +6,10 @@ import Return from './return';
 import styles from '../../stylesheet.css';
 
 
-class Root {
+class Root extends React.Component {
   constructor(props) {
     super(props);
-    state = {
+    this.state = {
       rate: 300,
       capital: 100,
       capital_withdrawal: 100,
@@ -36,7 +36,7 @@ class Root {
           onChangeRate={this.onChangeRate}
         />
         <Profit
-          rate={rate}
+          rate={this.state.rate}
         />
         <Return/>
       </div>

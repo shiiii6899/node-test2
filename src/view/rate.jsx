@@ -7,7 +7,7 @@ export default function Rate(props) {
 				<td><b>利率:</b></td>
 				<td>
 					<form action="xxx.php" method="post">
-						<label><input type="number" name="number" onChange={this.props.onChangeRate}/></label>
+						<label><input type="number" name="number" onChange={props.onChangeRate}/></label>
           </form>  
 				</td>
 			</tr>
