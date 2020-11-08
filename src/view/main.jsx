@@ -16,10 +16,12 @@ class Root extends React.Component {
       additional_capital: [0, 0, 0],
       withdrawal: [0, 0, 0]
     }
+    this.onChangeRate = this.onChangeRate.bind(this);
   }
 
   onChangeRate(event) {
-    this.setState({rate: event.value});
+    console.log(event.target.value);
+    this.setState({rate: event.target.value});
   }
 
   render()  {
@@ -33,6 +35,7 @@ class Root extends React.Component {
         <p>を下の表に入力してください。</p>
         
         <Rate
+          rate={this.state.rate}
           onChangeRate={this.onChangeRate}
         />
         <Profit

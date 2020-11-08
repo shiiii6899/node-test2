@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Profit() {
+export default function Profit(props) {
   return (
 	<div className='main'>
     　<h2>バイオマス売買収益</h2>
@@ -22,7 +22,7 @@ export default function Profit() {
 					</form>
 				</td>
 				<td></td>
-				<td></td>
+  <td>{props.rate}</td>
 				<td></td>
 				<td></td>
 			</tr>
