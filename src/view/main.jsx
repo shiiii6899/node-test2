@@ -13,12 +13,13 @@ class Root extends React.Component {
       rate: 300,
       capital: 100,
       capital_withdrawal: 100,
-      additional_capital: [0, 0, 0],
-      withdrawal: [0, 0, 0]
+      additional_capitals: [0, 0, 0, 0],
+      withdrawals: [0, 0, 0, 0]
     }
     this.onChangeRate = this.onChangeRate.bind(this);
     this.onChangeCapital = this.onChangeCapital.bind(this);
     this.onChangeCapital_withdrawal = this.onChangeCapital_withdrawal.bind(this);
+    this.onChangeAdditional_capital = this.onChangeAdditional_capital.bind(this);
   }
 
 
@@ -37,9 +38,32 @@ class Root extends React.Component {
     this.setState({capital_withdrawal: event.target.value});
   }
 
-
+  onChangeAdditional_capital(event) {
+    console.log(event.target.value);
+    this.setState({additional_capitals: event.target.value});
+  }
 
   render()  {
+    let buyings = [ this.state.capital ];
+    let profits = [];
+    profits.push(this.state.capital * this.state.rate / 100);
+
+    // 2年目の売買と利益の計算
+    buyings.push(buyings[0] + profits[0] - this.state.capital_withdrawal + this.state.additional_capitals[0]);
+    profits.push(buyings[1] * this.state.rate / 100);
+
+    // 3年目の売買と利益の計算
+    buyings.push(buyings[1] + profits[1] - this.state.withdrawals[1] + this.state.additional_capitals[1]);
+    profits.push(buyings[2] * this.state.rate / 100);
+    
+     // 4年目の売買と利益の計算
+     buyings.push(buyings[2] + profits[2] - this.state.withdrawals[2] + this.state.additional_capitals[2]);
+     profits.push(buyings[3] * this.state.rate / 100);
+     
+      // 5年目の売買と利益の計算
+    buyings.push(buyings[3] + profits[3] - this.state.withdrawals[3] + this.state.additional_capitals[3]);
+    profits.push(buyings[4] * this.state.rate / 100);
+    
     return (
       <div>
         <h1 className={styles.title}>ウダツベーシックインカム計算機</h1>
@@ -56,14 +80,22 @@ class Root extends React.Component {
         <Profit
           rate={this.state.rate}
           capital={this.state.capital}
+          capital_withdrawal={this.state.capital_withdrawal}
+          buyings={buyings}
+          profits={profits}
+          additional_capitals={this.state.additional_capitals}
           onChangeCapital={this.onChangeCapital}
+          onChangeCapital_withdrawal={this.onChangeCapital_withdrawal}
+          onChangeAdditional_capital={this.onChangeAdditional_capital}
         />
         <Return
           rate={this.state.rate}
           capital={this.state.capital}
           capital_withdrawal={this.state.capital_withdrawal}
+          additional_capitals={this.state.additional_capitals}
           onChangeCapital={this.onChangeCapital}
           onChangeCapital_withdrawal={this.onChangeCapital_withdrawal}
+          onChangeAdditional_capital={this.onChangeAdditional_capital}
         />
       </div>
     );

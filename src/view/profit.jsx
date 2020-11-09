@@ -17,32 +17,34 @@ export default function Profit(props) {
 			<tr>
 				<td>売買</td>
 				<td>
-					<label><input type="number" name="number" value={props.capital} onChange={props.onChangeCapital}/></label>
+					<label><input type="number" name="number" value={props.buyings[0]} onChange={props.onChangeCapital}/></label>
 				</td>
-				<td></td>
-  				<td>{props.rate}</td>
-				<td></td>
-				<td></td>
+				<td>{props.buyings[1]}</td>
+				<td>{props.buyings[2]}</td>
+				<td>{props.buyings[3]}</td>
+				<td>{props.buyings[4]}</td>
+  			
 			</tr>
 			<tr>
 				<td>年間利益</td>
-  				<td>{(props.capital * props.rate / 100).toFixed(2)}</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+  				<td>{props.profits[0].toFixed(2)}</td>
+				<td>{props.profits[1].toFixed(2)}</td>
+				<td>{props.profits[2].toFixed(2)}</td>
+				<td>{props.profits[3].toFixed(2)}</td>
+				<td>{props.profits[4].toFixed(2)}</td>
+			
 			</tr>
 			<tr>
 				<td>元本追加</td>
 				<td></td>
 				<td>
-					<label><input type="number" name="number"/></label>
+					<label><input type="number" name="number" value={props.additional_capitals[0]} onChange={props.onChangeAdditional_capital}/></label>
 				</td>
 				<td>
-					<label><input type="number" name="number"/></label>
+   					<label><input type="number" name="number" value={props.additional_capitals[1]} onChange={props.onChangeAdditional_capital}/></label>
 				</td>
 				<td>	
-					<label><input type="number" name="number"/></label>
+					<label><input type="number" name="number" value={props.additional_capitals[2]} onChange={props.onChangeAdditional_capital}/></label>
 				</td>
 				<td></td>
 			</tr>
