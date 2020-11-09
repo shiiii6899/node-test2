@@ -30,7 +30,7 @@ class Root extends React.Component {
 
   onChangeCapital(event) {
     console.log(event.target.value);
-    this.setState({capital: event.target.value});
+    this.setState({capital: parseInt(event.target.value)});
   }
 
   onChangeCapital_withdrawal(event) {
