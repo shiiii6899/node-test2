@@ -17,12 +17,27 @@ class Root extends React.Component {
       withdrawal: [0, 0, 0]
     }
     this.onChangeRate = this.onChangeRate.bind(this);
+    this.onChangeCapital = this.onChangeCapital.bind(this);
+    this.onChangeCapital_withdrawal = this.onChangeCapital_withdrawal.bind(this);
   }
+
 
   onChangeRate(event) {
     console.log(event.target.value);
     this.setState({rate: event.target.value});
   }
+
+  onChangeCapital(event) {
+    console.log(event.target.value);
+    this.setState({capital: event.target.value});
+  }
+
+  onChangeCapital_withdrawal(event) {
+    console.log(event.target.value);
+    this.setState({capital_withdrawal: event.target.value});
+  }
+
+
 
   render()  {
     return (
@@ -40,8 +55,16 @@ class Root extends React.Component {
         />
         <Profit
           rate={this.state.rate}
+          capital={this.state.capital}
+          onChangeCapital={this.onChangeCapital}
         />
-        <Return/>
+        <Return
+          rate={this.state.rate}
+          capital={this.state.capital}
+          capital_withdrawal={this.state.capital_withdrawal}
+          onChangeCapital={this.onChangeCapital}
+          onChangeCapital_withdrawal={this.onChangeCapital_withdrawal}
+        />
       </div>
     );
   }

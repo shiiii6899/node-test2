@@ -17,18 +17,16 @@ export default function Profit(props) {
 			<tr>
 				<td>売買</td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number" value={props.capital} onChange={props.onChangeCapital}/></label>
 				</td>
 				<td></td>
-  <td>{props.rate}</td>
+  				<td>{props.rate}</td>
 				<td></td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>年間利益</td>
-				<td></td>
+  				<td>{(props.capital * props.rate / 100).toFixed(2)}</td>
 				<td></td>
 				<td></td>
 				<td></td>
@@ -38,19 +36,14 @@ export default function Profit(props) {
 				<td>元本追加</td>
 				<td></td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number"/></label>
 				</td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number"/></label>
 				</td>
 				<td>	
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-				</form></td>
+					<label><input type="number" name="number"/></label>
+				</td>
 				<td></td>
 			</tr>
 		</table>

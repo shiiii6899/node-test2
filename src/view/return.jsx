@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Return() {
+export default function Return(props) {
   return (
 	<div className='main'>
     　<h2>リターン</h2>
@@ -18,28 +18,20 @@ export default function Return() {
 				<td>利確（払い戻し）6/15</td>
 				<td></td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number"/></label>
 				</td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number"/></label>
 				</td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number"/></label>
 				</td>
 				<td></td>
 			</tr>
 			<tr>
 				<td>元本（払い戻し）3/30</td>
 				<td>
-					<form action="xxx.php" method="post">
-						<label><input type="number" name="number"/></label>
-					</form>
+					<label><input type="number" name="number" value={props.capital_withdrawal} onChange={props.onChangeCapital_withdrawal}/></label>
 				</td>
 				<td></td>
 				<td></td>
@@ -48,7 +40,7 @@ export default function Return() {
 			</tr>
 			<tr>
 				<td>年間受取（払い戻し）</td>
-				<td></td>
+				<td>{props.capital_withdrawal}</td>
 				<td></td>
 				<td></td>
 				<td></td>
