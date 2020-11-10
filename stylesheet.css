@@ -1,3 +1,32 @@
-.title {
-    color: brown;
+body {
+	padding: 15px 50px;
+}
+
+header h1 {
+	font-size: 40px;
+	border-bottom: 3px solid navy;
+}
+
+.udatsutop p {
+	padding: 10px;
+}
+
+table {
+	border-collapse: collapse;
+	border: solid 1px black;
+}
+
+table th, table td{
+	border: dashed 1px black;
+	width: 200px;
+	height: 30px;
+}
+
+table th {
+	padding: 10px;
+	color: navy;
+}
+
+table td {
+	padding: 3px 10px;
 }
