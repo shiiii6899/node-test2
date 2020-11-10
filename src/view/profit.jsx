@@ -17,7 +17,7 @@ export default function Profit(props) {
 			<tr>
 				<td>売買</td>
 				<td>
-					<label><input type="number" name="number" value={props.buyings[0]} onChange={props.onChangeCapital}/></label>
+					<label><input type="number" name="number" value={props.buyings[0]} onChange={props.onChangeBuying}/></label>
 				</td>
 				<td>{props.buyings[1]}</td>
 				<td>{props.buyings[2]}</td>

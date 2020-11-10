@@ -11,13 +11,13 @@ class Root extends React.Component {
     super(props);
     this.state = {
       rate: 300,
-      capital: 100,
+      buying: 100,
       capital_withdrawal: 100,
       additional_capitals: [0, 0, 0, 0],
       withdrawals: [0, 0, 0, 0]
     }
     this.onChangeRate = this.onChangeRate.bind(this);
-    this.onChangeCapital = this.onChangeCapital.bind(this);
+    this.onChangeBuying = this.onChangeBuying.bind(this);
     this.onChangeCapital_withdrawal = this.onChangeCapital_withdrawal.bind(this);
     this.onChangeAdditional_capital = this.onChangeAdditional_capital.bind(this);
   }
@@ -28,9 +28,9 @@ class Root extends React.Component {
     this.setState({rate: event.target.value});
   }
 
-  onChangeCapital(event) {
+  onChangeBuying(event) {
     console.log(event.target.value);
-    this.setState({capital: parseInt(event.target.value)});
+    this.setState({buying: parseInt(event.target.value)});
   }
 
   onChangeCapital_withdrawal(event) {
@@ -44,9 +44,9 @@ class Root extends React.Component {
   }
 
   render()  {
-    let buyings = [ this.state.capital ];
+    let buyings = [ this.state.buying ];
     let profits = [];
-    profits.push(this.state.capital * this.state.rate / 100);
+    profits.push(this.state.buying * this.state.rate / 100);
 
     // 2年目の売買と利益の計算
     buyings.push(buyings[0] + profits[0] - this.state.capital_withdrawal + this.state.additional_capitals[0]);
@@ -78,22 +78,16 @@ class Root extends React.Component {
           onChangeRate={this.onChangeRate}
         />
         <Profit
-          rate={this.state.rate}
-          capital={this.state.capital}
-          capital_withdrawal={this.state.capital_withdrawal}
           buyings={buyings}
           profits={profits}
           additional_capitals={this.state.additional_capitals}
-          onChangeCapital={this.onChangeCapital}
+          onChangeBuying={this.onChangeBuying}
           onChangeCapital_withdrawal={this.onChangeCapital_withdrawal}
           onChangeAdditional_capital={this.onChangeAdditional_capital}
         />
         <Return
-          rate={this.state.rate}
-          capital={this.state.capital}
           capital_withdrawal={this.state.capital_withdrawal}
           additional_capitals={this.state.additional_capitals}
-          onChangeCapital={this.onChangeCapital}
           onChangeCapital_withdrawal={this.onChangeCapital_withdrawal}
           onChangeAdditional_capital={this.onChangeAdditional_capital}
         />
