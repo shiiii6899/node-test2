@@ -25,22 +25,22 @@ export default function Profit(props) {
               type="number"
               name="number"
               value={props.buyings[0]}
-              onChange={props.onChangeBuying}/>
+              onChange={props.onChangeBuying}/> 万円
             </label>
           </td>
-          <td>{props.buyings[1]}</td>
-          <td>{props.buyings[2]}</td>
-          <td>{props.buyings[3]}</td>
-          <td>{props.buyings[4]}</td>
+          <td>{props.buyings[1]} 万円</td>
+          <td>{props.buyings[2]} 万円</td>
+          <td>{props.buyings[3]} 万円</td>
+          <td>{props.buyings[4]} 万円</td>
 
         </tr>
         <tr>
           <td>年間利益</td>
-          <td>{props.profits[0].toFixed(2)}</td>
-          <td>{props.profits[1].toFixed(2)}</td>
-          <td>{props.profits[2].toFixed(2)}</td>
-          <td>{props.profits[3].toFixed(2)}</td>
-          <td>{props.profits[4].toFixed(2)}</td>
+          <td>{props.profits[0].toFixed(2)} 万円</td>
+          <td>{props.profits[1].toFixed(2)} 万円</td>
+          <td>{props.profits[2].toFixed(2)} 万円</td>
+          <td>{props.profits[3].toFixed(2)} 万円</td>
+          <td>{props.profits[4].toFixed(2)} 万円</td>
 
         </tr>
         <tr>
@@ -52,7 +52,7 @@ export default function Profit(props) {
               name="number"
               value={props.additional_capitals[0]}
   //            onChange={props.onChangeAdditional_capital}/>
-              onChange={(event) => { props.onChangeAdditional_capital(0, event) }}/>
+              onChange={(event) => { props.onChangeAdditional_capital(0, event) }}/> 万円
             </label>
           </td>
           <td>
@@ -60,7 +60,7 @@ export default function Profit(props) {
               <input type="number"
               name="number"
               value={props.additional_capitals[1]}
-              onChange={(event) => { props.onChangeAdditional_capital(1, event) }}/>
+              onChange={(event) => { props.onChangeAdditional_capital(1, event) }}/> 万円
             </label>
           </td>
           <td>
@@ -68,7 +68,7 @@ export default function Profit(props) {
               <input type="number"
               name="number"
               value={props.additional_capitals[2]}
-              onChange={(event) => { props.onChangeAdditional_capital(2, event) }}/>
+              onChange={(event) => { props.onChangeAdditional_capital(2, event) }}/> 万円
             </label>
           </td>
           <td></td>

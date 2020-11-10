@@ -18,14 +18,14 @@ export default function Return(props) {
 
       <tbody>
         <tr>
-          <td>利確（払い戻し）6/15</td>
+          <td>利確(払い戻し)6/15</td>
           <td></td>
           <td>
           <label>
               <input type="number"
               name="number"
               value={props.withdrawals[1]}
-              onChange={(event) => { props.onChangeWithdrawals(1, event) }}/>
+              onChange={(event) => { props.onChangeWithdrawals(1, event) }}/> 万円
             </label>
           </td>
           <td>
@@ -33,7 +33,7 @@ export default function Return(props) {
               <input type="number"
               name="number"
               value={props.withdrawals[2]}
-              onChange={(event) => { props.onChangeWithdrawals(2, event) }}/>
+              onChange={(event) => { props.onChangeWithdrawals(2, event) }}/> 万円
             </label>
           </td>
           <td>
@@ -41,15 +41,15 @@ export default function Return(props) {
               <input type="number"
               name="number"
               value={props.withdrawals[3]}
-              onChange={(event) => { props.onChangeWithdrawals(3, event) }}/>
+              onChange={(event) => { props.onChangeWithdrawals(3, event) }}/> 万円
             </label>
           </td>
-          <td>{props.final_withdrawals}</td>
+          <td>{props.final_withdrawals} 万円</td>
         </tr>
         <tr>
-          <td>元本（払い戻し）3/30</td>
+          <td>元本(払い戻し)3/30</td>
           <td>
-            <label><input type="number" name="number" value={props.capital_withdrawal} onChange={props.onChangeCapital_withdrawal}/></label>
+            <label><input type="number" name="number" value={props.capital_withdrawal} onChange={props.onChangeCapital_withdrawal}/> 万円</label>
           </td>
           <td></td>
           <td></td>
@@ -57,12 +57,12 @@ export default function Return(props) {
           <td></td>
         </tr>
         <tr>
-          <td>年間受取（払い戻し）</td>
-          <td>{props.capital_withdrawal}</td>
-          <td>{props.withdrawals[1]}</td>
-          <td>{props.withdrawals[2]}</td>
-          <td>{props.withdrawals[3]}</td>
-          <td>{props.final_withdrawals}</td>
+          <td>年間受取(払い戻し)</td>
+          <td>{props.capital_withdrawal} 万円</td>
+          <td>{props.withdrawals[1]} 万円</td>
+          <td>{props.withdrawals[2]} 万円</td>
+          <td>{props.withdrawals[3]} 万円</td>
+          <td>{props.final_withdrawals} 万円</td>
         </tr>
       </tbody>
     </table>
