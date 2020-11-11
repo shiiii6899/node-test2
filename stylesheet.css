@@ -1,5 +1,5 @@
 body {
-    padding: 15px 50px;
+    padding: 4em 6em;
 }
 
 .main {
@@ -7,35 +7,36 @@ body {
 }
 
 header h1 {
-    font-size: 40px;
-    border-bottom: 3px solid navy;
+    font-size: 2.5em;
+    border-bottom: 0.1em solid navy;
 }
 
 .top {
     width: 40em;
-    padding: 1em;
     line-height: 1.8em;
     float: left;
+    font-size: 1.1em;
+    padding-right: 2em;
 }
 
 .interest {
-    padding-top: 4.5em;
-    padding-bottom: 2em;
+    padding-top: 3.8em;
+    padding-bottom: 1.5em;
 }
 
 table {
     border-collapse: collapse;
-    border: solid 1px black;
+    border: solid 0.1em black;
 }
 
 table th, table td{
-    border: dashed 1px black;
-    width: 200px;
-    height: 30px;
+    border: dashed 0.1em black;
+    width: 20em;
+    height: 2em;
 }
 
 table th {
-    padding: 10px;
+    padding: 0.5em;
     color: navy;
 }
 
@@ -44,11 +45,12 @@ table td {
 }
 
 input:hover {
-    box-shadow: 0 0 5px 0  rgba(255, 153, 0, 1);
-    border: 2px solid #FFF;
+    box-shadow: 0 0 0.3em 0  rgb(247, 113, 4);
+    border: 0.1em solid #FFF;
     outline: 0;
 }
 
 input {
     width: 5em;
+    height: 1.3em;
 }
