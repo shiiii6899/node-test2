@@ -44,7 +44,7 @@ export default function Return(props) {
               onChange={(event) => { props.onChangeWithdrawals(3, event) }}/> 万円
             </label>
           </td>
-          <td>{props.final_withdrawals} 万円</td>
+          <td>{props.final_withdrawals.toFixed(2)} 万円</td>
         </tr>
         <tr>
           <td>元本(払い戻し)3/30</td>
@@ -62,7 +62,7 @@ export default function Return(props) {
           <td>{props.withdrawals[1]} 万円</td>
           <td>{props.withdrawals[2]} 万円</td>
           <td>{props.withdrawals[3]} 万円</td>
-          <td>{props.final_withdrawals} 万円</td>
+          <td>{props.final_withdrawals.toFixed(2)} 万円</td>
         </tr>
       </tbody>
     </table>

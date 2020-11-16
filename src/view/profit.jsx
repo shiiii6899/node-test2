@@ -28,10 +28,10 @@ export default function Profit(props) {
               onChange={props.onChangeBuying}/> 万円
             </label>
           </td>
-          <td>{props.buyings[1]} 万円</td>
-          <td>{props.buyings[2]} 万円</td>
-          <td>{props.buyings[3]} 万円</td>
-          <td>{props.buyings[4]} 万円</td>
+          <td>{props.buyings[1].toFixed(2)} 万円</td>
+          <td>{props.buyings[2].toFixed(2)} 万円</td>
+          <td>{props.buyings[3].toFixed(2)} 万円</td>
+          <td>{props.buyings[4].toFixed(2)} 万円</td>
 
         </tr>
         <tr>

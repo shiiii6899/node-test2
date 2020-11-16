@@ -9,7 +9,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Pico React',
+      title: 'ウダツベーシックインカム計算機',
       template: 'index.template.html',
     }),
   ],
