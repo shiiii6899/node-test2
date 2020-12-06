@@ -11,6 +11,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'ウダツベーシックインカム計算機',
       template: 'index.template.html',
+    　hash:true,
     }),
   ],
   output: {
