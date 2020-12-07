@@ -102,7 +102,7 @@ class Root extends React.Component {
           capital_withdrawal={this.state.capital_withdrawal}
           additional_capitals={this.state.additional_capitals}
           withdrawals={this.state.withdrawals}
-          final_withdrawals={buyings[4] + profits[4]}
+          final_withdrawals={profits[4]}
           onChangeCapital_withdrawal={this.onChangeCapital_withdrawal}
           onChangeAdditional_capital={this.onChangeAdditional_capital}
           onChangeWithdrawals={this.onChangeWithdrawals}
